@@ -11,8 +11,8 @@ with open('input.txt', 'r') as f:
          x = f.read()
          x = ''.join(x.splitlines())
 
-start = 1
-end = 14
+start = 0
+end = 13
 product = 1
 while end <= 1001:
          block = x[start:end]
