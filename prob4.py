@@ -1,8 +1,9 @@
-'''prob4.py: find the largest palidrome made form the product of two 3-digit numbers'''
+'''prob4.py: find the largest palidrome made from the product of two 3-digit numbers'''
 
 def isPalindrome(num):
          '''Test a string version of a number for palindromicity'''
-         return str(num)[::-1] == str(num)
+         number = str(num)
+         return number[::-1] == number
 
 def search():
          '''Search through all combinations of products of 3 digit numbers'''
