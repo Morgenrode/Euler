@@ -31,12 +31,33 @@ while j < 20:
                 product = prod(grid[j][i:i+4])
         except:
             pass
+
         # Straigh path, top-to-bottom
         try:
             if prod([grid[j][i], grid[j+1][i], \
             grid[j+2][i], grid[j+3][i]]) > product:
                 product = prod([grid[j][i], grid[j+1][i], \
-            grid[j+2][i], grid[j+3][i]])
+                grid[j+2][i], grid[j+3][i]])
         except:
             pass
+
+        # Diagonal Path, TL to BR
+        try:
+            if prod([grid[j+m][i+m] for m in range(4)]) > product:
+                product = prod([grid[j+m][i+m] for m in range(4)])
+        except:
+            pass
+
+        # Diagonal Path, BL to TR
+        try:
+            if prod([grid[j-n][i+n] for n in range(4)]) > product:
+                product = prod([grid[j-n][i+n] for n in range(4)])
+        except:
+            pass
+
+        i+= 1
         print(product)
+    j+= 1
+    print(product)
+
+print(product)
