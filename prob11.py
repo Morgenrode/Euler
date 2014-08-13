@@ -56,8 +56,6 @@ while j < 20:
             pass
 
         i+= 1
-        print(product)
     j+= 1
-    print(product)
 
 print(product)
