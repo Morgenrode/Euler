@@ -13,7 +13,7 @@ with open('words.txt', 'r') as f:
 
 triangles = set()
 n = 1
-while n <= max(word_vals):
+while ((n*(n + 1)) // 2) <= max(word_vals):
     triangles.add(int((n*(n + 1)/2)))
     n += 1
 
